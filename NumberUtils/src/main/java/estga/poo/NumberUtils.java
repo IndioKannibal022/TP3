@@ -5,7 +5,7 @@ import java.util.List;
 
 public class NumberUtils {
 
-    double calcularMedia(List<Double> numeros){
+    public static double calcularMedia(List<Double> numeros){
         double soma = 0;
         int count  = 0;
 
@@ -17,7 +17,7 @@ public class NumberUtils {
         return media;
     }
 
-    double calcularMediana(List<Double> numeros){
+    public static double calcularMediana(List<Double> numeros){
         ordenarLista(numeros,true);
         double mediana = 0;
         int meio = numeros.size()/2;
@@ -31,7 +31,7 @@ public class NumberUtils {
         return mediana;
     }
 
-    double calcularModa(List<Double> numeros){
+    public static double calcularModa(List<Double> numeros){
         ordenarLista(numeros,true);
         double numAtual = 0, moda = 0;
         
@@ -47,7 +47,7 @@ public class NumberUtils {
         return moda;
     }
 
-    void ordenarLista(List<Double> numeros, boolean crescente){
+    public static void ordenarLista(List<Double> numeros, boolean crescente){
         if (crescente == true){
             numeros.sort(Comparator.naturalOrder());
         }else {
