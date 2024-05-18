@@ -4,8 +4,10 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        //objetos rand e numeros para instanciar uma lista de numeros aleatórios para testes//
         Random rand = new Random();
         List<Double> numeros = new ArrayList<>();
+
 
         System.out.println("Lista aleatória de 25 valores:");
         for (int i = 0; i < 25; i++) {
@@ -15,6 +17,7 @@ public class Main {
             System.out.print(roundedN+" ");
         }
 
+        //Prints para mostrar os resultados da média, mediana, moda e a lista em ordem crescente//
         System.out.println("\n\nMédia dos números: "+ NumberUtils.calcularMedia(numeros));
         System.out.println("\nMediana dos números: "+ NumberUtils.calcularMediana(numeros));
         System.out.println("\nModa dos números: "+ NumberUtils.calcularModa(numeros));

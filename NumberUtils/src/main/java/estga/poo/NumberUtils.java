@@ -2,9 +2,10 @@ package estga.poo;
 import java.util.Comparator;
 import java.util.List;
 
-
+//classe onde serão invocados os métodos pedidos//
 public class NumberUtils {
 
+    //método calcular média//
     public static double calcularMedia(List<Double> numeros){
         double soma = 0;
         int count  = 0;
@@ -17,7 +18,9 @@ public class NumberUtils {
         return media;
     }
 
+    //método calcular mediana//
     public static double calcularMediana(List<Double> numeros){
+        //utiliza o método ordenarLista para ordenar a lista em ordem crescente//
         ordenarLista(numeros,true);
         double mediana = 0;
         int meio = numeros.size()/2;
@@ -31,6 +34,7 @@ public class NumberUtils {
         return mediana;
     }
 
+    //método calcular moda//
     public static double calcularModa(List<Double> numeros){
         ordenarLista(numeros,true);
         double numAtual = 0, moda = 0;
@@ -47,6 +51,7 @@ public class NumberUtils {
         return moda;
     }
 
+    //método para ordenar a lista de forma crescente//
     public static void ordenarLista(List<Double> numeros, boolean crescente){
         if (crescente == true){
             numeros.sort(Comparator.naturalOrder());
